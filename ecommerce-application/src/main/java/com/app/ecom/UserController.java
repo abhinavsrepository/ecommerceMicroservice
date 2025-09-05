@@ -18,7 +18,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class UserController {
 
     private final UserService userService;
-   
 
     @GetMapping("/api/users")
     public List<User> getAllUsers() {
@@ -27,8 +26,8 @@ public class UserController {
 
     @PostMapping("/api/users")
     public String createUser(@RequestBody User user) {
-       userService.addUser(user);
-        return "user added";
+        userService.addUser(user);
+        return "user added successfully";
     }
 
 }
